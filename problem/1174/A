@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    n *= 2;
+    int a[n];
+    set<int>s;  //manage repeated element in array
+    for(int i=0; i<n; i++){
+        cin>>a[i];
+        s.insert(a[i]);
+    }
+    sort(a,a+n);
+    if( s.size() == 1){
+        cout<<-1;
+    }
+    else{
+        for(int i=0; i<n; i++){
+            cout<<a[i]<<" ";
+        }
+    }
+    cout<<endl;
+    return 0;
+}
